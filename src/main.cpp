@@ -6,36 +6,65 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
-#include "HogeMock.h"
+#include "HogeFugaMock.h"
 
 using namespace std;
 
 class TestFix : public ::testing::TestWithParam<int32_t> {
 protected:
-    weak_ptr<testing::NiceMock<HogeMock>> mock;
-    weak_ptr<testing::NiceMock<HogeOrig>> orig;
+    shared_ptr<testing::NiceMock<HogeFugaMock>> mock;
+    shared_ptr<testing::NiceMock<HogeFugaOrig>> orig;
 
     virtual void SetUp() override {
         this->orig = initOrig();
         this->mock = initMock();
-        testing::Mock::AllowLeak(this->mock.lock().get());
+        testing::Mock::AllowLeak(this->mock.get());
     }
 
     virtual void TearDown() override {
     }
 };
 
-TEST_P(TestFix, test) {
+TEST_P(TestFix, incDecTest) {
     int32_t val = GetParam();
-    EXPECT_CALL(*mock.lock().get(), inc(testing::_)).WillRepeatedly(::testing::Return(orig.lock()->inc(val)));
-    EXPECT_CALL(*mock.lock().get(), dec(testing::_)).WillRepeatedly(::testing::Return(orig.lock()->dec(val)));
-    EXPECT_CALL(*mock.lock().get(), incDec(testing::_)).WillRepeatedly(::testing::Return(orig.lock()->incDec(val)));
-    int32_t res = incDecMany(10, val);
+    EXPECT_CALL(*mock.get(), inc(testing::_)).Times(1).WillRepeatedly(::testing::Return(orig->inc(val)));
+    EXPECT_CALL(*mock.get(), dec(testing::_)).Times(1).WillRepeatedly(::testing::Return(orig->dec(val)));
+    int32_t res = orig->incDec(val);
+    EXPECT_EQ(val, res);
+    cout << val << endl;
+}
+
+TEST_P(TestFix, incDecManyTest) {
+    int32_t val = GetParam();
+    EXPECT_CALL(*mock.get(), inc(testing::_)).Times(val).WillRepeatedly(::testing::Return(orig->inc(val)));
+    EXPECT_CALL(*mock.get(), dec(testing::_)).Times(val).WillRepeatedly(::testing::Return(orig->dec(val)));
+    EXPECT_CALL(*mock.get(), incDec(testing::_)).Times(val).WillRepeatedly(::testing::Return(orig->incDec(val)));
+    int32_t res = orig->incDecMany(10, val);
     EXPECT_EQ(10, res);
     cout << val << endl;
 }
 
-INSTANTIATE_TEST_SUITE_P(test1, TestFix, ::testing::Values(10, 20, 30));
+TEST_P(TestFix, incTest) {
+    int32_t val = GetParam();
+    int32_t res = orig->inc(val);
+    EXPECT_EQ(val + 1, res);
+    cout << val << endl;
+}
+
+TEST_P(TestFix, decTest) {
+    int32_t val = GetParam();
+    int32_t res = orig->dec(val);
+    EXPECT_EQ(val - 1, res);
+    cout << val << endl;
+}
+
+INSTANTIATE_TEST_SUITE_P(incDecManyTest, TestFix, ::testing::Values(10, 20, 30));
+
+INSTANTIATE_TEST_SUITE_P(incDecTest, TestFix, ::testing::Values(10, 20, 30));
+
+INSTANTIATE_TEST_SUITE_P(incTest, TestFix, ::testing::Values(10, 20, 30));
+
+INSTANTIATE_TEST_SUITE_P(decTest, TestFix, ::testing::Values(10, 20, 30));
 
 int main(int32_t argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);

@@ -20,33 +20,36 @@ public:
     virtual int32_t dec(int32_t val) = 0;
 
     virtual int32_t incDec(int32_t val) = 0;
+
+    virtual int32_t incDecMany(int32_t val, size_t times) = 0;
 };
 
-class HogeMock : public HogeMockDummy {
+class HogeFugaMock : public HogeMockDummy {
 private:
 public:
     MOCK_METHOD1(inc, int32_t(int32_t val));
     MOCK_METHOD1(dec, int32_t(int32_t val));
     MOCK_METHOD1(incDec, int32_t(int32_t val));
+    MOCK_METHOD2(incDecMany, int32_t(int32_t val, size_t times));
 };
 
 
-class HogeOrig : public HogeMockDummy {
+class HogeFugaOrig : public HogeMockDummy {
 private:
 public:
     int32_t inc(int32_t val);
-
     int32_t dec(int32_t val);
-
     int32_t incDec(int32_t val);
+    int32_t incDecMany(int32_t val, size_t times);
 };
 
-weak_ptr<testing::NiceMock<HogeMock>> initMock();
+shared_ptr<testing::NiceMock<HogeFugaMock>> initMock();
 
-weak_ptr<testing::NiceMock<HogeOrig>> initOrig();
+shared_ptr<testing::NiceMock<HogeFugaOrig>> initOrig();
 
 int32_t inc(int32_t val);
 
 int32_t dec(int32_t val);
 
 int32_t incDec(int32_t val);
+

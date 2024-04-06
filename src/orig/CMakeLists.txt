@@ -11,3 +11,8 @@ set(CMAKE_MODULE_LINKER_FLAGS_INIT "-fuse-ld=lld")
 set(CMAKE_SHARED_LINKER_FLAGS_INIT "-fuse-ld=lld")
 
 add_library(OrigLib ./hoge.c ./fuga.c)
+
+target_include_directories(OrigLib PRIVATE
+        ./
+        ../orig
+)
