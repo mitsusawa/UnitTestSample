@@ -6,8 +6,8 @@
 static int32_t inc(int32_t val) {
     return ++val;
 }
-static int32_t dec(int32_t val) {
 
+static int32_t dec(int32_t val) {
     return --val;
 }
 

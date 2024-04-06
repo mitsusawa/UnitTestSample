@@ -22,10 +22,8 @@ extern "C" {
 
 namespace orig {
     extern "C" {
-
 #include "../orig/hoge.c"
 #include "../orig/fuga.c"
-
     }
 }
 
@@ -45,21 +43,21 @@ int32_t HogeFugaOrig::incDecMany(int32_t val, size_t times) {
     return orig::incDecMany(val, times);
 }
 
-shared_ptr<testing::NiceMock<HogeMockDummy>> hogeMock;
-shared_ptr<testing::NiceMock<HogeMockDummy>> hogeOrig;
+shared_ptr<testing::NiceMock<HogeMockDummy> > hogeMock;
+shared_ptr<testing::NiceMock<HogeMockDummy> > hogeOrig;
 
-shared_ptr<testing::NiceMock<HogeFugaMock>> initMock() {
+shared_ptr<testing::NiceMock<HogeFugaMock> > initMock() {
     if (!hogeMock) {
-        hogeMock = reinterpret_pointer_cast<testing::NiceMock<HogeMockDummy>>(
-                make_shared<testing::NiceMock<HogeFugaMock>>());
+        hogeMock = reinterpret_pointer_cast<testing::NiceMock<HogeMockDummy> >(
+            make_shared<testing::NiceMock<HogeFugaMock> >());
     }
-    return reinterpret_pointer_cast<testing::NiceMock<HogeFugaMock>>(hogeMock);
+    return reinterpret_pointer_cast<testing::NiceMock<HogeFugaMock> >(hogeMock);
 }
 
-shared_ptr<testing::NiceMock<HogeFugaOrig>> initOrig() {
+shared_ptr<testing::NiceMock<HogeFugaOrig> > initOrig() {
     if (!hogeOrig) {
-        hogeOrig = reinterpret_pointer_cast<testing::NiceMock<HogeMockDummy>>(
-                make_shared<testing::NiceMock<HogeFugaOrig>>());
+        hogeOrig = reinterpret_pointer_cast<testing::NiceMock<HogeMockDummy> >(
+            make_shared<testing::NiceMock<HogeFugaOrig> >());
     }
-    return reinterpret_pointer_cast<testing::NiceMock<HogeFugaOrig>>(hogeOrig);
+    return reinterpret_pointer_cast<testing::NiceMock<HogeFugaOrig> >(hogeOrig);
 }

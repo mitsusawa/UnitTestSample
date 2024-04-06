@@ -38,13 +38,14 @@ class HogeFugaOrig : public HogeMockDummy {
 private:
 public:
     int32_t inc(int32_t val);
+
     int32_t dec(int32_t val);
+
     int32_t incDec(int32_t val);
+
     int32_t incDecMany(int32_t val, size_t times);
 };
 
-shared_ptr<testing::NiceMock<HogeFugaMock>> initMock();
+shared_ptr<testing::NiceMock<HogeFugaMock> > initMock();
 
-shared_ptr<testing::NiceMock<HogeFugaOrig>> initOrig();
-
-
+shared_ptr<testing::NiceMock<HogeFugaOrig> > initOrig();
