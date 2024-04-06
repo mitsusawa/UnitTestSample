@@ -1,7 +1,7 @@
 [
 {
   "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
-  "command": "clang++ -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/. -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/./mock -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock -fuse-ld=lld -std=gnu++20 -o src/CMakeFiles/UnitTestSample.dir/main.cpp.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/main.cpp",
+  "command": "clang++ -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/. -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/./util -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/./mock -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock -g0 -fcoverage-mapping -fprofile-instr-generate -fuse-ld=lld -std=gnu++20 -o src/CMakeFiles/UnitTestSample.dir/main.cpp.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/main.cpp",
   "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/main.cpp"
 },
 {
@@ -26,17 +26,17 @@
 },
 {
   "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
-  "command": "clang++ -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/. -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/../orig -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock -fuse-ld=lld -std=gnu++20 -o src/mock/CMakeFiles/mockLib.dir/HogeMock.cpp.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/HogeMock.cpp",
-  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/HogeMock.cpp"
+  "command": "clang++ -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/. -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/../orig -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock -g0 -fcoverage-mapping -fprofile-instr-generate -fuse-ld=lld -std=gnu++20 -o src/mock/CMakeFiles/mockLib.dir/HogeFugaMock.cpp.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/HogeFugaMock.cpp",
+  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/HogeFugaMock.cpp"
 },
 {
   "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
-  "command": "clang -fuse-ld=lld -std=gnu11 -o src/orig/CMakeFiles/OrigLib.dir/hoge.c.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/hoge.c",
+  "command": "clang -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/. -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/../orig -g0 -fcoverage-mapping -fprofile-instr-generate -fuse-ld=lld -std=gnu11 -o src/orig/CMakeFiles/OrigLib.dir/hoge.c.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/hoge.c",
   "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/hoge.c"
 },
 {
   "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
-  "command": "clang -fuse-ld=lld -std=gnu11 -o src/orig/CMakeFiles/OrigLib.dir/fuga.c.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/fuga.c",
+  "command": "clang -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/. -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/../orig -g0 -fcoverage-mapping -fprofile-instr-generate -fuse-ld=lld -std=gnu11 -o src/orig/CMakeFiles/OrigLib.dir/fuga.c.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/fuga.c",
   "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/fuga.c"
 }
 ]
