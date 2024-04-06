@@ -1,7 +1,42 @@
 [
 {
   "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
-  "command": "/usr/bin/c++ -std=gnu++20 -o CMakeFiles/UnitTestSample.dir/src/main.cpp.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/main.cpp",
+  "command": "clang++ -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/. -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/./mock -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock -fuse-ld=lld -std=gnu++20 -o src/CMakeFiles/UnitTestSample.dir/main.cpp.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/main.cpp",
   "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/main.cpp"
+},
+{
+  "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
+  "command": "/usr/bin/c++ -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/include -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
+  "command": "/usr/bin/c++ -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
+  "command": "/usr/bin/c++ -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
+  "command": "/usr/bin/c++ -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
+  "command": "clang++ -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/. -I/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/../orig -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googletest -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock/include -isystem /mnt/c/Users/sawat/CLionProjects/UnitTestSample/_deps/googletest-src/googlemock -fuse-ld=lld -std=gnu++20 -o src/mock/CMakeFiles/mockLib.dir/HogeMock.cpp.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/HogeMock.cpp",
+  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/mock/HogeMock.cpp"
+},
+{
+  "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
+  "command": "clang -fuse-ld=lld -std=gnu11 -o src/orig/CMakeFiles/OrigLib.dir/hoge.c.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/hoge.c",
+  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/hoge.c"
+},
+{
+  "directory": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample",
+  "command": "clang -fuse-ld=lld -std=gnu11 -o src/orig/CMakeFiles/OrigLib.dir/fuga.c.o -c /mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/fuga.c",
+  "file": "/mnt/c/Users/sawat/CLionProjects/UnitTestSample/src/orig/fuga.c"
 }
 ]
