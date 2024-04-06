@@ -6,15 +6,16 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
-#include "HogeFugaMock.h"
+#include "HogeFugaMock.hpp"
 
 using namespace std;
+using namespace testing;
+
 
 class TestFix : public ::testing::TestWithParam<int32_t> {
 protected:
     shared_ptr<testing::NiceMock<HogeFugaMock>> mock;
     shared_ptr<testing::NiceMock<HogeFugaOrig>> orig;
-
     virtual void SetUp() override {
         this->orig = initOrig();
         this->mock = initMock();

@@ -47,9 +47,4 @@ shared_ptr<testing::NiceMock<HogeFugaMock>> initMock();
 
 shared_ptr<testing::NiceMock<HogeFugaOrig>> initOrig();
 
-int32_t inc(int32_t val);
-
-int32_t dec(int32_t val);
-
-int32_t incDec(int32_t val);
 
