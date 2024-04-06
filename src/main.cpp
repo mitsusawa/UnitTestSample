@@ -18,6 +18,7 @@ protected:
     virtual void SetUp() override {
         this->orig = initOrig();
         this->mock = initMock();
+        testing::Mock::AllowLeak(this->mock.lock().get());
     }
 
     virtual void TearDown() override {
@@ -34,7 +35,7 @@ TEST_P(TestFix, test) {
     cout << val << endl;
 }
 
-INSTANTIATE_TEST_CASE_P(test1, TestFix, ::testing::Values(10, 20, 30));
+INSTANTIATE_TEST_SUITE_P(test1, TestFix, ::testing::Values(10, 20, 30));
 
 int main(int32_t argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
