@@ -55,6 +55,16 @@ public:
     static unsigned char *createBuf(size_t size);
 };
 
-shared_ptr<testing::NiceMock<HogeFugaMock> > initMock();
+shared_ptr<testing::StrictMock<HogeFugaMock> > initMock();
 
-shared_ptr<testing::NiceMock<HogeFugaOrig> > initOrig();
+shared_ptr<testing::StrictMock<HogeFugaOrig> > initOrig();
+
+void setMock(testing::StrictMock<HogeFugaMock> &mock);
+
+int32_t inc(int32_t val);
+int32_t dec(int32_t val);
+int32_t incDec(int32_t val);
+int32_t incDecMany(int32_t val, size_t times);
+int32_t mainOrig(int32_t argc, char **argv);
+bool checkBuf(unsigned char *buf);
+unsigned char *createBuf(size_t size);
