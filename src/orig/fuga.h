@@ -5,3 +5,4 @@
 #include "stdint.h"
 
 int32_t incDecMany(int32_t val, size_t times);
+unsigned char *createBuf(size_t size);

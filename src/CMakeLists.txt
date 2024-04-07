@@ -38,10 +38,7 @@ target_include_directories(UnitTestSample PRIVATE
 
 target_link_libraries(UnitTestSample PRIVATE
         mockLib
-        OrigHogeLib
-        OrigFugaLib
 
-        gcov
         gtest
         gmock
         pthread

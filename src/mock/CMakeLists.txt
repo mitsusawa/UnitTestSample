@@ -18,9 +18,6 @@ target_include_directories(mockLib PRIVATE
 )
 
 target_link_libraries(mockLib PRIVATE
-        OrigHogeLib
-        OrigFugaLib
-
         gcov
         gtest
         gmock

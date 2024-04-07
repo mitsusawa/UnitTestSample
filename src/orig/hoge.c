@@ -4,13 +4,17 @@
 #include "hoge.h"
 
 static int32_t inc(int32_t val) {
-    return ++val;
+    printf("%d\n", ++val);
+    return val;
 }
 
 static int32_t dec(int32_t val) {
-    return --val;
+    printf("%d\n", --val);
+    return val;
 }
 
 int32_t incDec(int32_t val) {
-    return dec(inc(val));
+    val = dec(inc(val));
+    printf("%d\n", val);
+    return val;
 }

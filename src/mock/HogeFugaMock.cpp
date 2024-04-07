@@ -15,15 +15,18 @@
 
 using namespace std;
 
+
 extern "C" {
-#include "../orig/hoge.h"
-#include "../orig/fuga.h"
+#include "hoge.h"
+#include "fuga.h"
 }
 
 namespace orig {
     extern "C" {
+#define main(...) mainOrig(__VA_ARGS__)
 #include "../orig/hoge.c"
 #include "../orig/fuga.c"
+#undef main
     }
 }
 
@@ -41,6 +44,19 @@ int32_t HogeFugaOrig::incDec(int32_t val) {
 
 int32_t HogeFugaOrig::incDecMany(int32_t val, size_t times) {
     return orig::incDecMany(val, times);
+}
+
+int32_t HogeFugaOrig::main(int32_t argc, char **argv) {
+    return orig::mainOrig(argc, argv);
+}
+
+bool HogeFugaOrig::checkBuf(unsigned char *buf) {
+    return orig::checkBuf(buf);
+}
+
+
+unsigned char *HogeFugaOrig::createBuf(size_t size) {
+    return orig::createBuf(size);
 }
 
 shared_ptr<testing::NiceMock<HogeMockDummy> > hogeMock;
